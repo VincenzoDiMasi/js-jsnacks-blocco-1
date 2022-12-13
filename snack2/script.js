@@ -22,6 +22,19 @@ buttonElement.addEventListener('click', function(){
         alert('Inserisci un nome!')
     }
 
+    let isAllowed = false;
     //Controllo se il nome inserito è tra quelli presenti nell'array
-    
-})
+    for (let i = 0 ; i < guests.length ; i++) {
+        const currentGuest = guests[i];
+
+        if(currentGuest === nameValue){
+            isAllowed = true;
+        }
+    }
+    //Stampo in pagina
+    if (isAllowed) {
+        resultElement.innerHTML = `<h2>Sei uno dei fortunati!</h2>`;
+    } else {
+        resultElement.innerHTML = `<h2>Tornatene a casa!</h2>`;
+    }
+}) 
