@@ -10,5 +10,18 @@ const resultElement = document.getElementById('result');
 //Creo un array con i nomi degli invitati
 const guests = ['Nerone', 'Giulio Cesare', 'Caligola', 'Ottaviano'];
 
-//Creo una variabile con il value dell'input
-const nameValue = nameElement.value;
+
+
+//Creo un event listener
+buttonElement.addEventListener('click', function(){
+    //Creo una variabile con il value dell'input
+    const nameValue = nameElement.value;
+
+    //Validazione
+    if(!nameValue){
+        alert('Inserisci un nome!')
+    }
+
+    //Controllo se il nome inserito è tra quelli presenti nell'array
+    
+})
